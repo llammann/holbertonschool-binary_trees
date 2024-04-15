@@ -1,6 +1,13 @@
 #ifndef BINARY_TREES_H
 #define BINARY_TREES_H
 
+/* LIBRARIES */
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <stddef.h>
+#include <string.h>
+
 /**
  * struct binary_tree_s - Binary tree node structure
  *
@@ -39,5 +46,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree);
 binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 
+void aux_height(const binary_tree_t *tree, size_t node_h, size_t *height);
+int is_leaf(const binary_tree_t *node);
 
 #endif
